@@ -1,0 +1,25 @@
+{
+  "evaluation_config": {
+    "gt_root": "../scene1/labels",
+    "pred_root": "./results/DSFNet_DSFNet_default/parallel_fps_60_workers_3",
+    "iou_threshold": 0.3,
+    "class_names": [
+      "drone",
+      "car",
+      "ship",
+      "bus",
+      "pedestrian",
+      "cyclist"
+    ],
+    "averaging_method": "direct_video_level",
+    "averaging_description": "直接基于视频总体指标进行平均",
+    "consistency_iou_threshold": 0.3,
+    "stability_threshold": 0.8,
+    "temporal_consistency_rules": {
+      "targets_le5": "要求所有目标检出，且类别正确，且IoU > 0.3",
+      "targets_gt5": "要求80%目标检出，且类别正确，且IoU > 0.3"
+    }
+  },
+  "video_results": {},
+  "overall_results": {}
+}
